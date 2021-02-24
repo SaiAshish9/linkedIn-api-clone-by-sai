@@ -1,3 +1,11 @@
+## FrontEnd Repositories
+
+```
+https://github.com/SaiAshish9/linkedIn-app-clone-by-sai
+
+https://github.com/SaiAshish9/linkedIn-web-ui
+```
+
 ## Connecting to Mysql Amazon RDS 
 
 ```
@@ -60,4 +68,31 @@ tree prisma
 
 ```
 npx prisma migrate dev --name init --preview-feature
+```
+
+## Fetch All Posts
+
+```
+query {
+  posts{
+    id
+    content
+    image
+    userReaction
+    published
+    videoUrl
+    author{
+      id
+    }
+    commentCount
+    reactions
+    liked
+    clapped
+    loved
+    bright
+    support
+    curious
+    variableReactionsCount
+    }
+}
 ```

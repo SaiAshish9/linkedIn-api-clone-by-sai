@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  name: String
+  headline: String
+  posts: [Post!]
+  image: String
+}
+
+type Post {
+  id: ID!
+  content: String
+  image: String
+  userReaction: String
+  published: String
+  videoUrl: String
+  author: User
+  commentCount: Float
+  reactions: Float
+  liked: Boolean
+  clapped: Boolean
+  loved: Boolean
+  bright: Boolean
+  support: Boolean
+  curious: Boolean
+  variableReactionsCount: Float
+}
+
+type Query {
+  users: [User!]!
+  posts: [Post!]!
+}
