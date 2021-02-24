@@ -28,8 +28,8 @@ export class Post {
   @Field((type) => Number, { nullable: true })
   commentCount: number | null;
 
-  @Field((type) => Number, { nullable: true })
-  reactions: number | null;
+  @Field((type) => String, { nullable: true })
+  reactions: string | null;
 
   @Field((type) => Boolean, { nullable: true })
   liked: boolean | null;

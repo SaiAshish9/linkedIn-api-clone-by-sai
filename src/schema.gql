@@ -19,7 +19,7 @@ type Post {
   videoUrl: String
   author: User
   commentCount: Float
-  reactions: String
+  reactions: Float
   liked: Boolean
   clapped: Boolean
   loved: Boolean
