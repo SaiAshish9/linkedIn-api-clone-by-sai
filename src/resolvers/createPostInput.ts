@@ -21,7 +21,7 @@ export class CreatePostInput {
   commentCount: number;
 
   @Field({ nullable: true })
-  authorId: number;
+  authorName: string;
 
   @Field({ nullable: true })
   reactions: string;

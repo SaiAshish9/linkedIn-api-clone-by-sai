@@ -42,7 +42,7 @@ export class PostResolver {
       bright,
       support,
       curious,
-      authorId,
+      authorName,
     } = data;
 
     return this.prismaService.post.create({
@@ -62,7 +62,8 @@ export class PostResolver {
         support,
         curious,
         author: {
-          connect: { id: authorId },
+          connect: { name: authorName },
+          // ensure that name in User model is unique at schema.prisma
         },
       },
     });
