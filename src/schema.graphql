@@ -1,0 +1,32 @@
+type User {
+  id: ID!
+  name: String
+  headline: String
+  image: String
+  posts: [Post]
+}
+
+type Post {
+  id: ID!
+  content: String
+  image: String
+  userReaction: String
+  published: String
+  videoUrl: String
+  author: User
+  commentCount: Int
+  reactions: Int
+  liked: Boolean
+  clapped: Boolean
+  loved: Boolean
+  bright: Boolean
+  support: Boolean
+  curious: Boolean
+  variantReactionsCount: Int
+}
+
+type Query {
+  posts: [Post!]!
+  users: [User!]!
+  user(id: Float!): User
+}
