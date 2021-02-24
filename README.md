@@ -201,3 +201,9 @@ INSERT INTO linkedIn.User values(1,"Google","20,701,240 followers","https://medi
 INSERT INTO linkedIn.Post values(1,null,"https://media-exp1.licdn.com/dms/image/C5622AQEcCkjOSS3xJg/feedshare-image-offsite-ads_350_624/0/1613995014067?e=1617235200&v=beta&t=ukgWOspqqx8TBnU99KhVnUL2f-EdbOkg_sVtRatoLyM","Sarthak celebrates this","1w",1,null,28,"1,616",true,true,true,false,false,false,3);SELECT * FROM linkedIn.Post;
 
 ```
+
+## Curl Command
+
+```
+Copy Curl Operation Can Be Executed From The GUI.
+```
