@@ -24,7 +24,7 @@ model Post {
   image String?
   userReaction String
   published String
-  authorId Int?
+  authorId Int? @unique
   videoUrl String?
   author   User?   @relation(fields: [authorId], references: [id])
   commentCount Int?

@@ -73,7 +73,7 @@ npx prisma migrate dev --name init --preview-feature
 ## Fetch All Posts
 
 ```
-query A{
+query posts{
   posts{
     id
     content
@@ -100,8 +100,24 @@ query A{
 ## Fetch All Users
 
 ```
-query B{
+query users{
   users{
+    id
+    image
+    headline
+    name
+  }
+}
+```
+
+## Create User
+```
+mutation createUser{
+  createUser(data:{
+    image:"https://media-exp1.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1519856215226?e=1622073600&v=beta&t=p9zXj2dj6BXsOGH65sw6Sw4iWqAg_h4q38ABubR4a2",
+    headline:"20,701,240 followers",
+    name:"Google"
+  }){
     id
     image
     headline
@@ -163,6 +179,16 @@ mutation createPost{
 mutation deletePosts{
   deleteAllPosts{
     content
+  }
+}
+```
+
+## Delete All Users
+
+```
+mutation deleteUsers{
+  deleteAllUsers{
+    name
   }
 }
 ```

@@ -5,6 +5,8 @@ import {
   Mutation,
   Context,
   Args,
+  ResolveField,
+  Root,
 
 } from '@nestjs/graphql';
 import { Inject } from '@nestjs/common';
@@ -12,10 +14,22 @@ import { Post } from '../models/post';
 import { PrismaService } from '../prisma.service';
 import { Prisma } from '@prisma/client';
 import { CreatePostInput } from './createPostInput';
+import { User } from 'src/models/user';
 
 @Resolver(Post)
 export class PostResolver {
   constructor(@Inject(PrismaService) private prismaService: PrismaService) {}
+  
+  @ResolveField()
+  author(@Root() post: Post): Promise<User | null> {
+    return this.prismaService.post
+      .findUnique({
+        where: {
+          id: post.id,
+        },
+      })
+      .author()
+  }
 
   @Query((returns) => [Post])
   posts() {

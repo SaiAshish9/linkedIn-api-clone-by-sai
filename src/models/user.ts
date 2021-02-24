@@ -8,7 +8,7 @@ export class User {
   id: number;
 
   @Field((type) => String, { nullable: true })
-  name?: string | null;
+  name: string | null;
 
   @Field((type) => String, { nullable: true })
   headline?: string | null;

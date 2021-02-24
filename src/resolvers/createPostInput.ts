@@ -20,7 +20,7 @@ export class CreatePostInput {
   @Field({ nullable: true })
   commentCount: number;
 
-  @Field({ nullable: true })
+  @Field()
   authorName: string;
 
   @Field({ nullable: true })

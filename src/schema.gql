@@ -35,8 +35,16 @@ type Query {
 }
 
 type Mutation {
+  createUser(data: CreateUserInput!): User!
+  deleteAllUsers: User
   createPost(data: CreatePostInput!): Post!
   deleteAllPosts: Post
+}
+
+input CreateUserInput {
+  image: String
+  headline: String
+  name: String
 }
 
 input CreatePostInput {
@@ -46,7 +54,7 @@ input CreatePostInput {
   published: String
   videoUrl: String
   commentCount: Float
-  authorId: Float
+  authorName: String!
   reactions: String
   liked: Boolean
   clapped: Boolean
