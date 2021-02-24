@@ -35,5 +35,5 @@ model Post {
   bright Boolean? @default(false)
   support Boolean? @default(false)
   curious Boolean? @default(false)    
-  variantReactionsCount Int @default(0)
+  variableReactionsCount Int @default(0)
 }

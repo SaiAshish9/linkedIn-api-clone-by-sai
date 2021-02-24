@@ -33,3 +33,26 @@ type Query {
   users: [User!]!
   posts: [Post!]!
 }
+
+type Mutation {
+  createPost(data: CreatePostInput!): Post!
+  deleteAllPosts: Post
+}
+
+input CreatePostInput {
+  content: String
+  image: String
+  userReaction: String
+  published: String
+  videoUrl: String
+  commentCount: Float
+  authorId: Float
+  reactions: String
+  liked: Boolean
+  clapped: Boolean
+  loved: Boolean
+  bright: Boolean
+  support: Boolean
+  curious: Boolean
+  variableReactionsCount: Float
+}

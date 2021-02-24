@@ -15,7 +15,7 @@ type Post {
   videoUrl: String
   author: User
   commentCount: Int
-  reactions: Int
+  reactions: String
   liked: Boolean
   clapped: Boolean
   loved: Boolean
@@ -29,4 +29,31 @@ type Query {
   posts: [Post!]!
   users: [User!]!
   user(id: Float!): User
+}
+
+input CreatePostInput {
+  content: String
+  authorId: String!
+  image: String
+  userReaction: String
+  published: String
+  videoUrl: String
+  commentCount: Int
+  reactions: String
+  liked: Boolean
+  clapped: Boolean
+  loved: Boolean
+  bright: Boolean
+  support: Boolean
+  curious: Boolean
+  variantReactionsCount: Int
+}
+
+type{
+  createPost(data:CreatePostInput!): Post!
+  deleteAllPosts:BatchPayload!
+}
+
+type BatchPayload {
+  count: Int!
 }

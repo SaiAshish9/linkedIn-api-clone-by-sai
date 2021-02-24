@@ -95,7 +95,11 @@ query A{
     variableReactionsCount
     }
 }
+```
 
+## Fetch All Users
+
+```
 query B{
   users{
     id
@@ -104,9 +108,64 @@ query B{
     name
   }
 }
-
 ```
 
+## Create Post
+```
+mutation createPost{
+  createPost(
+  data:{
+  content:null,
+  authorId:1,
+  image:"https://media-exp1.licdn.com/dms/image/C5622AQEcCkjOSS3xJg/feedshare-image-offsite-ads_350_624/0/1613995014067?e=1617235200&v=beta&t=ukgWOspqqx8TBnU99KhVnUL2f-EdbOkg_sVtRatoLyM",
+  userReaction: "Sarthak celebrates this",
+  published: "1w",
+  videoUrl: null,
+  commentCount: 28,
+  reactions: "1,616",
+  liked: true,
+  clapped: true,
+  loved: true,
+  bright: false,
+  support: false,
+  curious: false,
+  variableReactionsCount: 3
+}
+){
+   id
+    content
+    image
+    userReaction
+    published
+    videoUrl
+    author{
+      id
+      name
+      headline
+      image
+    }
+    commentCount
+    reactions
+    liked
+    clapped
+    loved
+    bright
+    support
+    curious
+    variableReactionsCount
+} 
+}
+```
+
+## Delete All Posts
+
+```
+mutation deletePosts{
+  deleteAllPosts{
+    content
+  }
+}
+```
 
 ## SQL Command's
 
