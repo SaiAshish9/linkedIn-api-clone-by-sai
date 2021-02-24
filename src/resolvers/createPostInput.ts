@@ -11,6 +11,10 @@ export class CreatePostInput {
   @Field({ nullable: true })
   userReaction: string;
 
+
+  @Field({ nullable: true })
+  userReactionText: string;
+
   @Field({ nullable: true })
   published?: string;
 

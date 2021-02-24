@@ -15,6 +15,7 @@ type Post {
   content: String
   image: String
   userReaction: String
+  userReactionText: String
   published: String
   videoUrl: String
   author: User
@@ -51,6 +52,7 @@ input CreatePostInput {
   content: String
   image: String
   userReaction: String
+  userReactionText: String
   published: String
   videoUrl: String
   commentCount: Float

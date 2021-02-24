@@ -79,6 +79,7 @@ query posts{
     content
     image
     userReaction
+    userReactionText
     published
     videoUrl
     author{
@@ -135,6 +136,7 @@ mutation createPost{
   authorId:1,
   image:"https://media-exp1.licdn.com/dms/image/C5622AQEcCkjOSS3xJg/feedshare-image-offsite-ads_350_624/0/1613995014067?e=1617235200&v=beta&t=ukgWOspqqx8TBnU99KhVnUL2f-EdbOkg_sVtRatoLyM",
   userReaction: "Sarthak celebrates this",
+  userReactionText: null,
   published: "1w",
   videoUrl: null,
   commentCount: 28,
@@ -152,6 +154,7 @@ mutation createPost{
     content
     image
     userReaction
+    userReactionText
     published
     videoUrl
     author{

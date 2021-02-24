@@ -17,6 +17,9 @@ export class Post {
   userReaction: string | null;
 
   @Field((type) => String, { nullable: true })
+  userReactionText: string | null;
+
+  @Field((type) => String, { nullable: true })
   published?: string | null;
 
   @Field((type) => String, { nullable: true })

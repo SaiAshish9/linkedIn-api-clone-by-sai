@@ -23,6 +23,7 @@ model Post {
   content  String?
   image String?
   userReaction String
+  userReactionText String?
   published String
   authorId Int? @unique
   videoUrl String?
