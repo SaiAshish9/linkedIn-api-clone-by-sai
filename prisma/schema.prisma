@@ -38,3 +38,12 @@ model Post {
   curious Boolean? @default(false)    
   variableReactionsCount Int @default(0)
 }
+
+model Notification{
+  id Int @id @default(autoincrement())
+  image String?
+  text1 String?
+  text2 String?
+  text3 String?
+  published String?
+}

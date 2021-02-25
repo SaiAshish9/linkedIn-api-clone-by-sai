@@ -1,3 +1,4 @@
+import { NotificationResolver } from './resolvers/resolvers.notification';
 import { PostResolver } from './resolvers/resolvers.post';
 import { UserResolver } from './resolvers/resolvers.user';
 import { PrismaService } from './prisma.service';
@@ -13,6 +14,6 @@ import { AppController } from './app.controller';
     }),
   ],
   controllers: [AppController],
-  providers: [PrismaService,UserResolver,PostResolver],
+  providers: [PrismaService,UserResolver,PostResolver,NotificationResolver],
 })
 export class AppModule {}

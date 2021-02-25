@@ -2,6 +2,15 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Notification {
+  id: ID!
+  image: String
+  text1: String
+  text2: String
+  text3: String
+  published: String
+}
+
 type User {
   id: ID!
   name: String
@@ -33,6 +42,7 @@ type Post {
 type Query {
   users: [User!]!
   posts: [Post!]!
+  notifications: [Notification!]!
 }
 
 type Mutation {
@@ -40,6 +50,7 @@ type Mutation {
   deleteAllUsers: User
   createPost(data: CreatePostInput!): Post!
   deleteAllPosts: Post
+  deleteAllNotifications: Notification
 }
 
 input CreateUserInput {

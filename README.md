@@ -111,6 +111,20 @@ query users{
 }
 ```
 
+## Fetch All Notifications
+
+```
+query notifications{
+  notifications{
+    id
+    image
+    text1
+    text2
+    text3
+  }
+}
+```
+
 ## Create User
 ```
 mutation createUser{
