@@ -121,6 +121,7 @@ query notifications{
     text1
     text2
     text3
+    published
   }
 }
 ```
