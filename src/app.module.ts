@@ -1,3 +1,4 @@
+import { ConnectionResolver } from './resolvers/resolvers.connection';
 import { RecommendationResolver } from './resolvers/resolvers.recommendation';
 import { NotificationResolver } from './resolvers/resolvers.notification';
 import { PostResolver } from './resolvers/resolvers.post';
@@ -15,6 +16,6 @@ import { AppController } from './app.controller';
     }),
   ],
   controllers: [AppController],
-  providers: [PrismaService,UserResolver,PostResolver,NotificationResolver,RecommendationResolver],
+  providers: [PrismaService,UserResolver,PostResolver,NotificationResolver,RecommendationResolver,ConnectionResolver],
 })
 export class AppModule {}
