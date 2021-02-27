@@ -141,6 +141,21 @@ query recommendations{
 }
 ```
 
+## Fetch All Connections
+
+```
+query connections{
+  connections{
+    id
+    title
+    description
+    count
+    background
+    avatar
+  }
+}
+```
+
 ## Create User
 ```
 mutation createUser{

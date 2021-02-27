@@ -2,6 +2,15 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Connection {
+  id: ID!
+  title: String
+  description: String
+  count: Float
+  background: String
+  avatar: String
+}
+
 type Recommendation {
   id: ID!
   image: String
@@ -53,6 +62,7 @@ type Query {
   posts: [Post!]!
   notifications: [Notification!]!
   recommendations: [Recommendation!]!
+  connections: [Connection!]!
 }
 
 type Mutation {
@@ -62,6 +72,7 @@ type Mutation {
   deleteAllPosts: Post
   deleteAllNotifications: Notification
   deleteAllRecommendations: Recommendation
+  deleteAllConnections: Connection
 }
 
 input CreateUserInput {
