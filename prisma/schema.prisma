@@ -11,39 +11,57 @@ generator client {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  name  String  @unique
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
   headline String
-  posts Post[]
-  image String?
+  posts    Post[]
+  image    String?
 }
 
 model Post {
-  id       Int     @id @default(autoincrement())
-  content  String?
-  image String?
-  userReaction String
-  userReactionText String?
-  published String
-  authorId Int? @unique
-  videoUrl String?
-  author   User?   @relation(fields: [authorId], references: [id])
-  commentCount Int?
-  reactions String?
-  liked Boolean? @default(false)
-  clapped Boolean? @default(false)
-  loved Boolean? @default(false)
-  bright Boolean? @default(false)
-  support Boolean? @default(false)
-  curious Boolean? @default(false)    
-  variableReactionsCount Int @default(0)
+  id                     Int      @id @default(autoincrement())
+  content                String?
+  image                  String?
+  userReaction           String
+  userReactionText       String?
+  published              String
+  authorId               Int?     @unique
+  videoUrl               String?
+  author                 User?    @relation(fields: [authorId], references: [id])
+  commentCount           Int?
+  reactions              String?
+  liked                  Boolean? @default(false)
+  clapped                Boolean? @default(false)
+  loved                  Boolean? @default(false)
+  bright                 Boolean? @default(false)
+  support                Boolean? @default(false)
+  curious                Boolean? @default(false)
+  variableReactionsCount Int      @default(0)
 }
 
-model Notification{
-  id Int @id @default(autoincrement())
-  image String?
-  text1 String?
-  text2 String?
-  text3 String?
+model Notification {
+  id        Int     @id @default(autoincrement())
+  image     String?
+  text1     String?
+  text2     String?
+  text3     String?
   published String?
+}
+
+model Recommendation {
+  id       Int     @id @default(autoincrement())
+  image    String?
+  title    String?
+  company  String?
+  location String?
+  easyApply    Boolean?
+}
+
+model Connection {
+  id       Int     @id @default(autoincrement())
+  title String?
+  description String?
+  count Int?
+  background String?
+  avatar String?
 }

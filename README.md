@@ -126,6 +126,21 @@ query notifications{
 }
 ```
 
+## Fetch All Recommendations
+
+```
+query recommendations{
+  recommendations{
+    id
+    image
+    title
+    company
+    location
+    easyApply
+  }
+}
+```
+
 ## Create User
 ```
 mutation createUser{

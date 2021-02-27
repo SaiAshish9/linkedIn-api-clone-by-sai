@@ -2,6 +2,15 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Recommendation {
+  id: ID!
+  image: String
+  title: String
+  company: String
+  location: String
+  easyApply: Boolean
+}
+
 type Notification {
   id: ID!
   image: String
@@ -43,6 +52,7 @@ type Query {
   users: [User!]!
   posts: [Post!]!
   notifications: [Notification!]!
+  recommendations: [Recommendation!]!
 }
 
 type Mutation {
@@ -51,6 +61,7 @@ type Mutation {
   createPost(data: CreatePostInput!): Post!
   deleteAllPosts: Post
   deleteAllNotifications: Notification
+  deleteAllRecommendations: Recommendation
 }
 
 input CreateUserInput {
