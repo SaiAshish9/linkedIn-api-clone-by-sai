@@ -255,3 +255,9 @@ INSERT INTO linkedIn.Post values(1,null,"https://media-exp1.licdn.com/dms/image/
 ```
 Copy Curl Operation Can Be Executed From The GUI.
 ```
+
+## Docker Container
+
+```
+sudo docker build . --tag linked-in
+```
